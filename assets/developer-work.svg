@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-labelledby="title description">
+  <title id="title">C# and .NET software development illustration</title>
+  <desc id="description">A dark application workspace showing code, connected systems, and an API dashboard.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#232019"/>
+      <stop offset=".52" stop-color="#12151a"/>
+      <stop offset="1" stop-color="#101820"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0d8a5"/>
+      <stop offset="1" stop-color="#b98d52"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#222831"/>
+      <stop offset="1" stop-color="#171c23"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#bb925c" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#bb925c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-.3" y="-.3" width="1.6" height="1.6">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="480" height="560" rx="28" fill="url(#background)"/>
+  <circle cx="389" cy="130" r="172" fill="url(#glow)"/>
+  <circle cx="70" cy="470" r="150" fill="url(#glow)" opacity=".42"/>
+  <g fill="none" stroke="#d6b77d" stroke-opacity=".14">
+    <circle cx="382" cy="132" r="100"/>
+    <circle cx="382" cy="132" r="126"/>
+    <path d="M22 437h436M53 461h374"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="36" y="54" width="408" height="414" rx="23" fill="url(#panel)" stroke="#d9c08f" stroke-opacity=".28"/>
+    <path d="M36 94h408" stroke="#fff" stroke-opacity=".09"/>
+    <circle cx="62" cy="74" r="4" fill="#d9c08f"/>
+    <circle cx="78" cy="74" r="4" fill="#77736b"/>
+    <circle cx="94" cy="74" r="4" fill="#77736b"/>
+    <text x="414" y="79" fill="#8f969e" font-family="Segoe UI,Arial,sans-serif" font-size="10" text-anchor="end" letter-spacing="1.4">WORKSPACE</text>
+
+    <rect x="59" y="116" width="362" height="112" rx="16" fill="#1b222a" stroke="#fff" stroke-opacity=".07"/>
+    <rect x="76" y="133" width="58" height="58" rx="15" fill="url(#gold)"/>
+    <text x="105" y="170" fill="#20190f" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" text-anchor="middle">C#</text>
+    <text x="153" y="151" fill="#d6b77d" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1.6">APPLICATION DEVELOPMENT</text>
+    <text x="153" y="175" fill="#f3f0e9" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="600">C# &amp; .NET</text>
+    <text x="153" y="197" fill="#a5a9ae" font-family="Segoe UI,Arial,sans-serif" font-size="12">Reliable software for real workflows</text>
+
+    <rect x="59" y="247" width="362" height="133" rx="16" fill="#12171d" stroke="#fff" stroke-opacity=".08"/>
+    <text x="80" y="273" fill="#aeb4bc" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" letter-spacing="1.4">SYSTEM INTEGRATION</text>
+    <path d="M120 317h238" stroke="#b98d52" stroke-opacity=".54" stroke-width="2"/>
+    <path d="M234 305v24" stroke="#b98d52" stroke-opacity=".54" stroke-width="2"/>
+    <rect x="78" y="295" width="84" height="45" rx="11" fill="#202831" stroke="#d9c08f" stroke-opacity=".32"/>
+    <rect x="198" y="295" width="72" height="45" rx="11" fill="#252821" stroke="#d9c08f" stroke-opacity=".4"/>
+    <rect x="306" y="295" width="94" height="45" rx="11" fill="#202831" stroke="#d9c08f" stroke-opacity=".32"/>
+    <text x="120" y="322" fill="#e8e4da" font-family="Segoe UI,Arial,sans-serif" font-size="12" text-anchor="middle">APP</text>
+    <text x="234" y="322" fill="#e5c992" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle">GATEWAY</text>
+    <text x="353" y="322" fill="#e8e4da" font-family="Segoe UI,Arial,sans-serif" font-size="12" text-anchor="middle">SYSTEM</text>
+    <circle cx="177" cy="317" r="4" fill="#e6ca95"/>
+    <circle cx="289" cy="317" r="4" fill="#e6ca95"/>
+
+    <rect x="59" y="398" width="362" height="48" rx="14" fill="#1b222a" stroke="#fff" stroke-opacity=".07"/>
+    <circle cx="84" cy="422" r="5" fill="#a5c9a5"/>
+    <text x="101" y="426" fill="#c6c8c9" font-family="Segoe UI,Arial,sans-serif" font-size="12">Thoughtful applications. Connected systems.</text>
+  </g>
+  <g fill="#e6ca95" opacity=".8">
+    <circle cx="421" cy="217" r="2"/>
+    <circle cx="48" cy="263" r="2"/>
+    <circle cx="424" cy="493" r="2"/>
+  </g>
+</svg>

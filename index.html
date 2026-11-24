@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marjuke Rahman - Creative Developer</title>
+    <meta name="description" content="Marjuke Rahman is a software developer focused on C# and .NET, with experience in investment management applications, integrations, task management, and web frontend development.">
+    <meta name="theme-color" content="#0b0d11">
+    <title>Marjuke Rahman | C# & .NET Developer</title>
     <style>
         * {
             margin: 0;
@@ -504,6 +506,447 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Portfolio refresh */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #e6ca95 0%, #b98d52 100%);
+            --secondary-gradient: linear-gradient(135deg, #e6ca95 0%, #b98d52 100%);
+            --accent-gradient: linear-gradient(135deg, #e6ca95 0%, #b98d52 100%);
+            --dark-bg: #0b0d11;
+            --darker-bg: #08090c;
+            --text-primary: #f5f2eb;
+            --text-secondary: #a7a39a;
+            --glass-bg: rgba(22, 23, 27, 0.78);
+            --glass-border: rgba(230, 202, 149, 0.16);
+        }
+
+        body {
+            font-family: Inter, "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+            background:
+                radial-gradient(ellipse at 82% 18%, rgba(185, 141, 82, 0.11), transparent 34rem),
+                var(--dark-bg);
+        }
+
+        nav {
+            padding: 18px 32px;
+            background: rgba(11, 13, 17, 0.88);
+        }
+
+        nav.scrolled {
+            padding: 14px 32px;
+        }
+
+        .logo {
+            background: none;
+            color: var(--text-primary);
+            -webkit-text-fill-color: currentColor;
+            display: grid;
+            width: 42px;
+            height: 42px;
+            place-items: center;
+            border: 1px solid rgba(230, 202, 149, 0.48);
+            border-radius: 12px;
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+        }
+
+        .hero {
+            min-height: 720px;
+            height: 100vh;
+            padding: 110px 32px 70px;
+            background:
+                radial-gradient(circle at 76% 47%, rgba(185, 141, 82, 0.12), transparent 25rem),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 60%);
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+            align-items: center;
+            gap: clamp(42px, 7vw, 100px);
+            width: min(1120px, 100%);
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            max-width: 680px;
+            text-align: left;
+        }
+
+        .hero-content h1 {
+            background: none;
+            color: var(--text-primary);
+            -webkit-text-fill-color: currentColor;
+            letter-spacing: -0.055em;
+            font-size: clamp(3.2rem, 7vw, 6.1rem);
+            line-height: 0.99;
+        }
+
+        .hero-content h1 span {
+            color: #e6ca95;
+        }
+
+        .hero-content p {
+            max-width: 540px;
+            margin: 22px 0 34px;
+            font-size: clamp(1.08rem, 2vw, 1.26rem);
+        }
+
+        .eyebrow {
+            margin-bottom: 22px;
+            color: #e6ca95;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .cta-button {
+            background: #e6ca95;
+            color: #17130c;
+            box-shadow: 0 12px 32px rgba(185, 141, 82, 0.18);
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 16px 38px rgba(185, 141, 82, 0.28);
+        }
+
+        .hero-secondary-link {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 24px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .hero-secondary-link:hover {
+            color: var(--text-primary);
+        }
+
+        .hero-portrait {
+            position: relative;
+            justify-self: end;
+            width: min(100%, 410px);
+            aspect-ratio: 0.86;
+            padding: 11px;
+            border: 1px solid rgba(230, 202, 149, 0.42);
+            border-radius: 34px 34px 130px 34px;
+            background: linear-gradient(145deg, rgba(230, 202, 149, 0.22), rgba(255, 255, 255, 0.025) 55%);
+            box-shadow: 0 32px 90px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-portrait::before {
+            position: absolute;
+            z-index: -1;
+            top: 28px;
+            right: -25px;
+            width: 70%;
+            height: 70%;
+            border: 1px solid rgba(230, 202, 149, 0.23);
+            border-radius: 50%;
+            content: "";
+        }
+
+        .hero-portrait img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px 25px 118px 25px;
+            object-fit: cover;
+            object-position: center 38%;
+        }
+
+        .hero-portrait picture {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .portrait-label {
+            position: absolute;
+            bottom: 28px;
+            left: -38px;
+            padding: 14px 18px;
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            background: rgba(17, 18, 21, 0.9);
+            box-shadow: 0 16px 42px rgba(0, 0, 0, 0.34);
+            color: var(--text-primary);
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            backdrop-filter: blur(16px);
+        }
+
+        .portrait-label span {
+            display: block;
+            margin-top: 4px;
+            color: #e6ca95;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .section {
+            padding: 88px 32px;
+            scroll-margin-top: 82px;
+        }
+
+        .section h2 {
+            margin-bottom: 38px;
+            background: none;
+            color: var(--text-primary);
+            -webkit-text-fill-color: currentColor;
+            letter-spacing: -0.035em;
+        }
+
+        .about-content {
+            display: block;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .about-text p + p {
+            margin-top: 18px;
+        }
+
+        .profile-facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 34px;
+            margin-top: 30px;
+        }
+
+        .profile-fact {
+            padding-left: 16px;
+            border-left: 1px solid rgba(230, 202, 149, 0.55);
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        .profile-fact strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 0;
+        }
+
+        .stack-panel {
+            margin-top: 22px;
+            padding: 28px;
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(230, 202, 149, 0.065), rgba(255, 255, 255, 0.018));
+        }
+
+        .stack-heading {
+            margin-bottom: 18px;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .stack-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .stack-tags span {
+            padding: 8px 13px;
+            border: 1px solid rgba(230, 202, 149, 0.2);
+            border-radius: 999px;
+            background: rgba(8, 9, 12, 0.5);
+            color: var(--text-primary);
+            font-size: 0.86rem;
+        }
+
+        .skill-card,
+        .project-card {
+            border-radius: 16px;
+            text-align: left;
+        }
+
+        .skill-card {
+            padding: 26px;
+        }
+
+        .skill-card:hover,
+        .project-card:hover {
+            transform: translateY(-4px);
+            background: rgba(20, 35, 57, 0.95);
+        }
+
+        .skill-icon {
+            color: #e6ca95;
+            background: none;
+            -webkit-text-fill-color: currentColor;
+            font-size: 1.7rem;
+        }
+
+        .skill-card h3,
+        .project-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.12rem;
+        }
+
+        .skill-card p,
+        .project-content p {
+            color: var(--text-secondary);
+        }
+
+        .projects-grid {
+            grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+            gap: 18px;
+        }
+
+        .project-card {
+            overflow: visible;
+            padding: 26px;
+        }
+
+        .project-image,
+        .project-links {
+            display: none;
+        }
+
+        .project-content {
+            padding: 0;
+        }
+
+        .contact-content {
+            max-width: 680px;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .contact-actions a,
+        .social-link {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .contact-actions a {
+            padding: 12px 20px;
+            border: 1px solid var(--glass-border);
+            border-radius: 999px;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .contact-actions a:hover {
+            border-color: #e6ca95;
+            background: rgba(230, 202, 149, 0.08);
+        }
+
+        footer {
+            padding: 34px 20px;
+        }
+
+        .social-links {
+            gap: 22px;
+            margin-bottom: 16px;
+        }
+
+        .social-link {
+            font-size: 1rem;
+        }
+
+        a:focus-visible {
+            outline: 2px solid #e6ca95;
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 768px) {
+            nav,
+            nav.scrolled {
+                padding: 14px 20px;
+            }
+
+            .nav-links {
+                gap: 14px;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 70px 20px;
+            }
+
+            .hero {
+                height: auto;
+                min-height: 0;
+                padding: 130px 24px 80px;
+            }
+
+            .hero-layout {
+                grid-template-columns: 1fr;
+                gap: 52px;
+                max-width: 620px;
+            }
+
+            .hero-portrait {
+                justify-self: center;
+                width: min(78%, 360px);
+            }
+
+            .portrait-label {
+                left: -20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 10px;
+                font-size: 0.78rem;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .hero {
+                padding: 115px 20px 70px;
+            }
+
+            .hero-content h1 {
+                font-size: clamp(3rem, 15vw, 4.5rem);
+            }
+
+            .hero-secondary-link {
+                margin: 18px 0 0;
+            }
+
+            .hero-portrait {
+                width: min(82%, 320px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -515,114 +958,111 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#focus">Focus</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Marjuke Rahman</h1>
-            <p>Creative Developer & Digital Artist</p>
-            <a href="#projects" class="cta-button">View My Work</a>
+        <div class="hero-layout">
+            <div class="hero-content">
+                <div class="eyebrow">Software developer · C# / .NET</div>
+                <h1>Marjuke<br><span>Rahman</span></h1>
+                <p>Focused on C# and .NET, building applications, integrations, and thoughtful web experiences.</p>
+                <a href="#experience" class="cta-button">Explore my experience</a>
+                <a href="https://www.linkedin.com/in/marjuke-rahman-/" class="hero-secondary-link" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+            </div>
+            <div class="hero-portrait">
+                <picture>
+                    <source srcset="https://github.com/marjuke.png?size=800" type="image/png">
+                    <img src="assets/developer-work.svg" alt="Marjuke Rahman's GitHub profile photo, or a C# and .NET workspace illustration" width="400" height="460" fetchpriority="high">
+                </picture>
+                <div class="portrait-label">Marjuke Rahman<span>C# & .NET developer</span></div>
+            </div>
         </div>
     </section>
 
     <section id="about" class="section">
         <h2 class="reveal">About Me</h2>
         <div class="about-content reveal">
-            <div class="about-image">
-                <img src="assets/marjuke-rahman.png" alt="Marjuke Rahman" width="400" height="400" loading="lazy" style="height: auto;">
-            </div>
             <div class="about-text">
-                <p>I'm a passionate full-stack developer with over 5 years of experience creating digital experiences that bridge the gap between design and technology. My journey began with a fascination for how code can bring creative visions to life.</p>
-                
-                <p>I specialize in modern web technologies and have a keen eye for user experience design. When I'm not coding, you can find me exploring the latest design trends, contributing to open-source projects, or experimenting with new technologies.</p>
-                
-                <p>I believe in writing clean, efficient code and creating applications that not only function flawlessly but also provide delightful user experiences.</p>
+                <p>I'm a software developer with 4+ years of experience in .NET technologies, focused on C# and building applications that support real-world workflows.</p>
+                <p>My experience includes investment management applications, gateway and system integrations, task management applications, and web frontend development.</p>
+                <p>I value clear, maintainable solutions and performance-aware engineering. My LinkedIn profile highlights work with CQRS, .NET 8, Entity Framework Core, MediatR, FluentValidation, RabbitMQ, and BenchmarkDotNet.</p>
+                <div class="profile-facts">
+                    <div class="profile-fact"><strong>4+ years</strong>.NET experience</div>
+                    <div class="profile-fact"><strong>BAUET</strong>Bangladesh Army University of Engineering and Technology</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section">
-        <h2 class="reveal">Skills & Expertise</h2>
+    <section id="focus" class="section">
+        <h2 class="reveal">Technical focus</h2>
         <div class="skills-grid">
             <div class="skill-card reveal">
-                <div class="skill-icon">🚀</div>
-                <h3>Frontend Development</h3>
-                <p>React, Vue.js, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS</p>
+                <div class="skill-icon" aria-hidden="true">01</div>
+                <h3>C# & .NET</h3>
+                <p>Building and maintaining application features with a focus on reliable, readable code.</p>
             </div>
             <div class="skill-card reveal">
-                <div class="skill-icon">⚙️</div>
-                <h3>Backend Development</h3>
-                <p>Node.js, Express, Python, Django, PostgreSQL, MongoDB, GraphQL</p>
+                <div class="skill-icon" aria-hidden="true">02</div>
+                <h3>Application development</h3>
+                <p>Turning product and workflow needs into useful software.</p>
             </div>
             <div class="skill-card reveal">
-                <div class="skill-icon">🎨</div>
-                <h3>UI/UX Design</h3>
-                <p>Figma, Adobe Creative Suite, Prototyping, User Research</p>
+                <div class="skill-icon" aria-hidden="true">03</div>
+                <h3>Integrations</h3>
+                <p>Connecting systems through gateways and integration workflows.</p>
             </div>
             <div class="skill-card reveal">
-                <div class="skill-icon">☁️</div>
-                <h3>Cloud & DevOps</h3>
-                <p>AWS, Docker, Kubernetes, CI/CD, Git, Linux</p>
+                <div class="skill-icon" aria-hidden="true">04</div>
+                <h3>Web frontend development</h3>
+                <p>Creating clear interfaces for web applications.</p>
+            </div>
+        </div>
+        <div class="stack-panel reveal">
+            <div class="stack-heading">Technologies and patterns featured on LinkedIn</div>
+            <div class="stack-tags">
+                <span>C#</span>
+                <span>.NET 8</span>
+                <span>Entity Framework Core</span>
+                <span>CQRS</span>
+                <span>MediatR</span>
+                <span>FluentValidation</span>
+                <span>RabbitMQ</span>
+                <span>BenchmarkDotNet</span>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <h2 class="reveal">Featured Projects</h2>
+    <section id="experience" class="section">
+        <h2 class="reveal">Experience areas</h2>
         <div class="projects-grid">
             <div class="project-card reveal">
-                <div class="project-image"></div>
                 <div class="project-content">
-                    <h3>Personal Portfolio</h3>
-                    <p>Responsive website showcasing projects and skills with smooth scrolling and interactive animations.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
+                    <h3>Investment management</h3>
+                    <p>Applications supporting investment management workflows.</p>
                 </div>
             </div>
-
             <div class="project-card reveal">
-                <div class="project-image"></div>
                 <div class="project-content">
-                    <h3>AI Chatbot</h3>
-                    <p>Real-time chat application integrating AI for intelligent responses and conversation summaries.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">Socket.io</span>
-                        <span class="tech-tag">OpenAI API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
+                    <h3>Gateway & system integrations</h3>
+                    <p>Gateway and system integrations that help applications work together.</p>
                 </div>
             </div>
-
             <div class="project-card reveal">
-                <div class="project-image"></div>
                 <div class="project-content">
-                    <h3>Task Manager</h3>
-                    <p>Kanban-style task management tool featuring drag-and-drop boards, deadlines, and analytics.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
+                    <h3>Task management</h3>
+                    <p>Applications for organizing tasks and supporting day-to-day work.</p>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-content">
+                    <h3>Web frontend development</h3>
+                    <p>Frontend development for web-based applications.</p>
                 </div>
             </div>
         </div>
@@ -631,141 +1071,44 @@
     <section id="contact" class="section">
         <h2 class="reveal">Let's Work Together</h2>
         <div class="contact-content reveal">
-            <p>I'm always interested in hearing about new projects and opportunities. Whether you're a company looking to hire, or you're someone with an interesting project, I'd love to hear from you.</p>
-            
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            <p>Interested in working together or learning more about my work? Connect with me on LinkedIn or GitHub.</p>
+            <div class="contact-actions">
+                <a href="https://www.linkedin.com/in/marjuke-rahman-/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+                <a href="https://github.com/marjuke" target="_blank" rel="noopener noreferrer">View GitHub profile</a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="social-links">
-            <a href="#" class="social-link">📧</a>
-            <a href="https://www.linkedin.com/in/marjuke-rahman-/" class="social-link">💼</a>
-            <a href="#" class="social-link">🐙</a>
-            <a href="#" class="social-link">🐦</a>
+            <a href="https://www.linkedin.com/in/marjuke-rahman-/" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/marjuke" class="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
-        <p>&copy; 2024 Marjuke Rahman. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> Marjuke Rahman</p>
     </footer>
 
     <script>
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Scroll reveal animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            const message = this.querySelector('textarea').value;
-            
-            // Show success message (in a real app, you'd send this to a server)
-            alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon.`);
-            
-            // Reset form
-            this.reset();
-        });
-
-        // Add some interactive hover effects
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(-10px) scale(1)';
-            });
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero-content');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-
-        // Add typing effect to hero text
-        function typeWriter(element, text, speed = 50) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
+            document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+        } else {
+            document.querySelectorAll('.reveal').forEach(element => element.classList.add('active'));
         }
-
-        // Initialize typing effect on load
-        window.addEventListener('load', () => {
-            const heroTitle = document.querySelector('.hero-content h1');
-            const heroSubtitle = document.querySelector('.hero-content p');
-            
-            setTimeout(() => {
-                typeWriter(heroTitle, 'Marjuke Rahman', 100);
-            }, 500);
-            
-            setTimeout(() => {
-                typeWriter(heroSubtitle, 'Creative Developer & Digital Artist', 50);
-            }, 2000);
-        });
     </script>
 </body>
 </html>
